@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MembershipContent from "../components/Membership.astro";
+import ContactButton from "../components/ContactButton.html";
+---
+
+<Layout>
+  <Header />
+  <div class="w-full mx-auto">
+    <div
+      class="pt-38 px-10 pb-18 bg-linear-to-br from-warm-green to-cool-green"
+    >
+      <p class="text-center text-white text-3xl lg:text-5xl manrope-bold">
+        Join IFO
+      </p>
+    </div>
+  </div>
+  <MembershipContent />
+  <ContactButton />
+  <Footer />
+</Layout>
