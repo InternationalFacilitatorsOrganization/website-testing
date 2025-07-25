@@ -19,25 +19,28 @@ import Marketing from "../assets/marketing.jpg";
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-center mx-4"
         >
           <!-- Card 1 -->
-          <div
-            class="bg-warm-green rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
-          >
-            <img
-              src={TrainingCourse.src}
-              alt="Image of a group of seated participants facing a projector screen with an instructor standing"
-              class="w-full h-36 object-top object-cover"
-            />
-            <div class="px-3 py-4 md:p-6 text-center text-lime-200">
-              <h3 class="text-3xl solway-medium pb-2">Certification</h3>
-              <p class="solway-light">
-                Certification program for facilitators, empowering confidence,
-                recognition, and client appeal. Join us to unlock opportunities.
-              </p>
+          <a href="/facilitator-training">
+            <div
+              class="bg-warm-green rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
+            >
+              <img
+                src={TrainingCourse.src}
+                alt="Image of a group of seated participants facing a projector screen with an instructor standing"
+                class="w-full h-36 object-top object-cover"
+              />
+              <div class="px-3 py-4 md:p-6 text-center text-lime-200">
+                <h3 class="text-3xl solway-medium pb-2">Certification</h3>
+                <p class="solway-light">
+                  Certification program for facilitators, empowering confidence,
+                  recognition, and client appeal. Join us to unlock
+                  opportunities.
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
           <!-- Card 2 -->
           <div
-            class="bg-orange-300 rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
+            class="bg-orange-300 rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300"
           >
             <img
               src={GroupTherapy.src}
@@ -54,7 +57,7 @@ import Marketing from "../assets/marketing.jpg";
           </div>
           <!-- Card 3 -->
           <div
-            class="text-teal-200 bg-cool-green rounded-xl shadow-lg/50 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
+            class="text-teal-200 bg-cool-green rounded-xl shadow-lg/50 overflow-hidden transform transition duration-300"
           >
             <img
               src={Marketing.src}
