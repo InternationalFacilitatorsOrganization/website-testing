@@ -1,0 +1,51 @@
+---
+const { facilitator } = Astro.props;
+---
+
+<div
+  class="bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35 pt-6 hover:cursor-pointer w-5/6 md:w-full mx-auto"
+  onClick=`location.href=${facilitator.id}`
+>
+  <div
+    class="rounded-full border-3 border-white w-32 h-32 mx-auto overflow-hidden"
+  >
+    <img
+      src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fgeneric-user-icon%2Fgeneric-user-icon-3.jpg&f=1&nofb=1&ipt=a3675a5ca7f584ad893f3b23f735c53fcfffdc09ccdfc3103a423a3bdd07770d"
+      alt="Facilitator placeholder image"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <p
+    class="text-pretty text-center text-xl md:text-2xl lg:text-3xl solway-medium text-cool-green mt-4"
+  >
+    {facilitator.firstName}
+    {facilitator.lastName}
+  </p>
+  <p class="text-sm md:text-md text-gray-400 text-center manrope-light pt-2">
+    {facilitator.location}
+  </p>
+  <div
+    class="grid grid-cols-2 grid-cols-auto text-center w-full border-t-gray-300 border-t-1 mt-4"
+  >
+    <a
+      class="text-pretty text-sm py-4 border-r-gray-300 border-r-1 manrope-light icon-mail-alt text-cool-green"
+      href=`mailto:${facilitator.email}`
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      E-mail
+    </a>
+    {
+      facilitator.website && (
+        <a
+          class="text-sm manrope-light icon-link-ext text-cool-green py-4"
+          href={facilitator.website}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Website
+        </a>
+      )
+    }
+  </div>
+</div>

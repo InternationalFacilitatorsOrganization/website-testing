@@ -1,3 +1,16 @@
+---
+
+---
+
+<script>
+  const url = new URL(window.location.href);
+  const facilitatorName = url.searchParams.get("book-facilitator");
+  const formSubject = document.getElementById("subject") as HTMLInputElement;
+  if (facilitatorName && formSubject) {
+    formSubject.value = "Request to book " + facilitatorName;
+  }
+</script>
+
 <div class="w-full">
   <div class="container md:p-2 mx-auto w-3/4 md:w-3/5 py-10 px-0">
     <section class="md:py-10 md:w-full manrope-light">
@@ -59,12 +72,14 @@
         </div>
         <p class="w-full pb-6">
           <label class="text-sm"
-            >Subject <input
+            >Subject
+            <input
               type="text"
               id="subject"
               name="subject"
               class="rounded-sm p-2 border-1 border-gray-500 w-full"
               placeholder="Membership, Find a Facilitator, etc."
+              value=""
             /></label
           >
         </p>

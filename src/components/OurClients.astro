@@ -1,6 +1,6 @@
 ---
 import ClientList from "../components/ClientList.astro";
-import ContactButton from "./ContactButton.html";
+import ContactButton from "./utils/ContactButton.html";
 import FacilitatorDirectoryImg from "../assets/sweater-guy.jpg";
 import LearningImg from "../assets/learning-laptop.jpg";
 import EventPlanningImg from "../assets/event-planning.jpg";
@@ -27,20 +27,27 @@ import EventPlanningImg from "../assets/event-planning.jpg";
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
           <!-- Card 1 -->
-          <div class="bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden">
-            <img
-              src={FacilitatorDirectoryImg.src}
-              alt="Image of a man in a sweater talking to a small group"
-              class="w-full h-36 object-top object-cover"
-            />
-            <div class="p-6 text-center text-gray-600">
-              <h3 class="text-2xl font-semibold mb-2">Facilitator Directory</h3>
-              <p class="">
-                Certification program for facilitators, empowering confidence,
-                recognition, and client appeal. Join us to unlock opportunities.
-              </p>
+          <a href="/facilitators/">
+            <div
+              class="bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
+            >
+              <img
+                src={FacilitatorDirectoryImg.src}
+                alt="Image of a man in a sweater talking to a small group"
+                class="w-full h-36 object-top object-cover"
+              />
+              <div class="p-6 text-center text-gray-600">
+                <h3 class="text-2xl font-semibold mb-2">
+                  Facilitator Directory
+                </h3>
+                <p class="">
+                  Certification program for facilitators, empowering confidence,
+                  recognition, and client appeal. Join us to unlock
+                  opportunities.
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
           <!-- Card 2 -->
           <div class="bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden">
             <img
