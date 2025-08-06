@@ -27,18 +27,13 @@ const columns = [
     label: "Language(s)",
   },
   {
-    key: "country",
-    label: "Country",
-  },
-  {
-    key: "timeZone",
-    label: "Time Zone", 
-    sortable: true
-  },
-  {
     key: "location",
     label: "Location",
     sortable: true
+  },
+  {
+    key: "country",
+    label: "Country",
   },
   {
     key: "actions",
@@ -55,7 +50,6 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
     yearsOfExperience: facilitator.yearsOfExperience,
     languages: facilitator.languages,
     country: facilitator.country,
-    timeZone: facilitator.timeZone,
     location: facilitator.location,
     website: facilitator.website
   }));
@@ -82,8 +76,7 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
               className="w-8 h-8 rounded-lg mr-2"
             />
             <div>
-              <p className=" text-xl text-cool-green solway-medium">{item.firstName} {item.lastName}</p>
-              
+              <p className="text-nowrap text-md lg:text-lg text-cool-green solway-medium">{item.firstName} {item.lastName}</p>
             </div>
               
           </div>
@@ -94,12 +87,12 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
           <div className="text-center">
             <a href={`../contact?book-facilitator=${name}`} className="no-underline">
               <button
-                className="rounded-full bg-cool-green text-white font-bold px-2 py-1 md:px-4 manrope-bold text-sm  hover:cursor-pointer hover:bg-orange-300 hover:text-orange-800 focus:bg-warm-green focus:text-white">Request Booking</button>
+                className="rounded-full bg-cool-green text-white font-bold px-2 py-1 md:px-4 manrope-bold text-sm  hover:cursor-pointer hover:bg-orange-300 hover:text-orange-800 focus:bg-warm-green focus:text-white text-nowrap">Request Booking</button>
             </a>
           </div>
         );
       default:
-        return <p className="lg:text-nowrap">{value}</p>;
+        return <p className="text-gray-500 text-sm md:text-md">{value}</p>;
     }
   }
 
@@ -108,7 +101,6 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
     aria-label="Facilitator directory" 
     classNames={classNames}
     id="facilitator-directory-table"
-    selectionMode="single"
     >
       <TableHeader columns={columns} >
         {(column) => <TableColumn key={column.key} align={column.key === "yearsOfExperience" ? "center" : "start"}>{column.label}</TableColumn>}
