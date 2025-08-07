@@ -31,11 +31,6 @@ const columns = [
     label: "Country",
   },
   {
-    key: "yearsOfExperience",
-    label: "Experience (years)",
-    sortable: true
-  },
-  {
     key: "actions",
     label: "",
   }
@@ -56,7 +51,7 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
 
   const classNames = React.useMemo(
     () => ({
-      wrapper: ["border-1 border-gray-300 bg-gray-100 rounded-xl shadow-lg/25 pt-3 pb-2 w-fit min-w-7/8 mx-auto px-0"],
+      wrapper: ["border-1 border-gray-300 bg-gray-100 rounded-xl shadow-lg/25 pt-3 pb-2 md:w-fit md:max-w-full lg:w-3/4 min-w-7/8 mx-auto px-0"],
       th: [ "border-gray-400", "text-sm", "text-left", "text-gray-400", "pb-3", "pb-2", "uppercase"],
       tr: [ "border-1 border-gray-100 " ]
     }),
@@ -87,6 +82,10 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
               
           </div>
         );
+        case "languages":
+          return (
+            <p className="text-gray-500 text-sm md:text-md w-50">{value}</p>
+          )
       case "actions":
         const name = `${item.firstName} ${item.lastName}`
         return (
@@ -97,8 +96,6 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
             </a>
           </div>
         );
-        case "yearsOfExperience":
-          return <p className="text-gray-500 text-sm md:text-md pl-5">{value}</p>;
       default:
         return <p className="text-gray-500 text-sm md:text-md">{value}</p>;
     }
