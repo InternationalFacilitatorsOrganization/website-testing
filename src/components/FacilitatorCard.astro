@@ -3,12 +3,11 @@ const { facilitator } = Astro.props;
 const name = `${facilitator.firstName} ${facilitator.lastName}`;
 ---
 
-<!-- onClick=`location.href=${facilitator.id}` -->
 <div
-  class="bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35 pt-6 hover:cursor-pointer w-5/6 md:w-full mx-auto"
+  class="bg-gray-200 rounded-xl shadow-lg/25 duration-300 pt-6 w-5/6 md:w-full mx-auto min-w-full"
 >
   <div
-    class="rounded-full border-3 border-white w-24 h-24 mx-auto overflow-hidden"
+    class="rounded-full border-3 border-white w-24 h-24 mx-auto"
     style={{
       backgroundImage: `url(/facilitator-photos/${facilitator.firstName}${facilitator.lastName}.jpg)`,
       backgroundSize: "cover",
@@ -17,19 +16,25 @@ const name = `${facilitator.firstName} ${facilitator.lastName}`;
       height: "6rem",
       borderRadius: "6rem",
     }}
-    aria-placeholder="/facilitator-photos/placeholder.jpg"
   >
   </div>
 
   <p
-    class="text-pretty text-center text-xl md:text-2xl lg:text-3xl solway-medium text-cool-green mt-4"
+    class="text-pretty text-center text-xl md:text-xl lg:text-2xl solway-medium text-cool-green mt-4"
   >
     {facilitator.firstName}
     {facilitator.lastName}
   </p>
-  <p class="text-sm md:text-md text-gray-500 text-center manrope-light">
-    {facilitator.location}
+  <p
+    class="text-sm md:text-md xl:text-lg text-gray-500 text-center text-nowrap manrope-light px-2"
+  >
+    {
+      facilitator.location || (
+        <span class="italic text-gray-400 text-sm">location n/a</span>
+      )
+    }
   </p>
+
   <div class="py-3 text-center w-full border-t-gray-300 border-t-1 mt-4">
     <a href={`../contact?book-facilitator=${name}`} class="no-underline">
       <button

@@ -69,10 +69,10 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
                 backgroundImage: `url(/facilitator-photos/${item.firstName}${item.lastName}.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                width: "2.5rem",
-                height: "2.5rem",
-                borderRadius: "0.5rem",
-                marginRight: "0.5rem",
+                width: "3rem",
+                height: "3rem",
+                borderRadius: "0.33rem",
+                marginRight: "0.33rem",
               }}
               aria-placeholder="/facilitator-photos/placeholder.jpg"
             ></div>
