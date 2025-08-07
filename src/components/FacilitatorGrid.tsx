@@ -69,12 +69,18 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
       case "identity":
         return (
           <div className="flex flex-row items-center">
-            <img
-              // src={`https://ui-avatars.com/api/?name=${item.firstName}+${item.lastName}`}
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fgeneric-user-icon%2Fgeneric-user-icon-3.jpg&f=1&nofb=1&ipt=a3675a5ca7f584ad893f3b23f735c53fcfffdc09ccdfc3103a423a3bdd07770d"
-              alt={`${item.firstName} ${item.lastName}`}
-              className="w-8 h-8 rounded-lg mr-2"
-            />
+            <div
+              style={{
+                backgroundImage: `url(/facilitator-photos/${item.firstName}${item.lastName}.jpg)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "2.5rem",
+                height: "2.5rem",
+                borderRadius: "0.5rem",
+                marginRight: "0.5rem",
+              }}
+              aria-placeholder="/facilitator-photos/placeholder.jpg"
+            ></div>
             <div>
               <p className="text-nowrap text-md lg:text-lg text-cool-green solway-medium">{item.firstName} {item.lastName}</p>
             </div>

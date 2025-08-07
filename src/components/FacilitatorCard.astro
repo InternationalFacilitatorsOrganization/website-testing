@@ -9,13 +9,18 @@ const name = `${facilitator.firstName} ${facilitator.lastName}`;
 >
   <div
     class="rounded-full border-3 border-white w-24 h-24 mx-auto overflow-hidden"
+    style={{
+      backgroundImage: `url(/facilitator-photos/${facilitator.firstName}${facilitator.lastName}.jpg)`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      width: "6rem",
+      height: "6rem",
+      borderRadius: "6rem",
+    }}
+    aria-placeholder="/facilitator-photos/placeholder.jpg"
   >
-    <img
-      src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fgeneric-user-icon%2Fgeneric-user-icon-3.jpg&f=1&nofb=1&ipt=a3675a5ca7f584ad893f3b23f735c53fcfffdc09ccdfc3103a423a3bdd07770d"
-      alt="Facilitator placeholder image"
-      class="w-full h-full object-cover"
-    />
   </div>
+
   <p
     class="text-pretty text-center text-xl md:text-2xl lg:text-3xl solway-medium text-cool-green mt-4"
   >
