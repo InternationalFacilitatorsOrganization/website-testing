@@ -1,9 +1,6 @@
 ---
 import ClientList from "../components/ClientList.astro";
 import ContactButton from "./utils/ContactButton.html";
-import FacilitatorDirectoryImg from "../assets/sweater-guy.jpg";
-import LearningImg from "../assets/learning-laptop.jpg";
-import EventPlanningImg from "../assets/event-planning.jpg";
 ---
 
 <div class="bg-white w-full">
@@ -24,64 +21,6 @@ import EventPlanningImg from "../assets/event-planning.jpg";
         </p>
 
         <ClientList />
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
-          <!-- Card 1 -->
-          <a href="/facilitators/">
-            <div
-              class="bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
-            >
-              <img
-                src={FacilitatorDirectoryImg.src}
-                alt="Image of a man in a sweater talking to a small group"
-                class="w-full h-36 object-top object-cover"
-              />
-              <div class="p-6 text-center text-gray-600">
-                <h3 class="text-2xl font-semibold mb-2">
-                  Facilitator Directory
-                </h3>
-                <p class="">
-                  Certification program for facilitators, empowering confidence,
-                  recognition, and client appeal. Join us to unlock
-                  opportunities.
-                </p>
-              </div>
-            </div>
-          </a>
-          <!-- Card 2 -->
-          <div class="bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden">
-            <img
-              src={LearningImg.src}
-              alt="Image of a seated man talking in a group"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-6 text-center text-gray-600">
-              <h3 class="text-2xl font-semibold mb-2">Learning Tools</h3>
-              <p class="">
-                Connect, support, and grow with a confidential group of peer
-                facilitators for personal and professional benefits.
-              </p>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="text-gray-600 bg-gray-200 rounded-xl shadow-lg/25 overflow-hidden"
-          >
-            <img
-              src={EventPlanningImg.src}
-              alt="Marketing image"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-6 text-center">
-              <h3 class="text-2xl font-semibold mb-2">Event Planning</h3>
-              <p class="">
-                Access exclusive marketing opportunities, such as podcast
-                features and social media promotion, tailored to your membership
-                level.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   </div>

@@ -17,11 +17,6 @@ const columns = [
     key: "identity",
     label: "Identity"
   },
-    {
-    key: "yearsOfExperience",
-    label: "Experience (years)",
-    sortable: true
-  },
   {
     key: "languages",
     label: "Language(s)",
@@ -36,8 +31,13 @@ const columns = [
     label: "Country",
   },
   {
+    key: "yearsOfExperience",
+    label: "Experience (years)",
+    sortable: true
+  },
+  {
     key: "actions",
-    label: "Actions",
+    label: "",
   }
 ];
 
@@ -57,8 +57,8 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
   const classNames = React.useMemo(
     () => ({
       wrapper: ["border-1 border-gray-300 bg-gray-100 rounded-xl shadow-lg/25 pt-3 pb-2 w-fit min-w-7/8 mx-auto px-0"],
-      th: [ "border-gray-400", "text-sm", "text-left", "text-gray-400", "text-nowrap", "pb-3", "pb-2", "uppercase"],
-      tr: [ "border-1 border-gray-100" ]
+      th: [ "border-gray-400", "text-sm", "text-left", "text-gray-400", "pb-3", "pb-2", "uppercase"],
+      tr: [ "border-1 border-gray-100 " ]
     }),
     [],
   );
@@ -91,6 +91,8 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
             </a>
           </div>
         );
+        case "yearsOfExperience":
+          return <p className="text-gray-500 text-sm md:text-md pl-5">{value}</p>;
       default:
         return <p className="text-gray-500 text-sm md:text-md">{value}</p>;
     }
@@ -102,8 +104,8 @@ export const FacilitatorGrid = ({ facilitatorList }: { facilitatorList: any }) =
     classNames={classNames}
     id="facilitator-directory-table"
     >
-      <TableHeader columns={columns} >
-        {(column) => <TableColumn key={column.key} align={column.key === "yearsOfExperience" ? "center" : "start"}>{column.label}</TableColumn>}
+      <TableHeader columns={columns}>
+        {(column) => <TableColumn key={column.key} >{column.label}</TableColumn>}
       </TableHeader>
       <TableBody items={rows} emptyContent={"No facilitators found"} >
         {(item) => (

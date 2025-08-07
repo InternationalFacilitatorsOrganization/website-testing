@@ -9,7 +9,7 @@ import Marketing from "../assets/marketing.jpg";
   <div class="flex items-center justify-center pt-8 md:px-8 md:pt-12 w-full">
     <section class="solway-medium">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl mb-6">Membership</h2>
+        <h2 class="text-3xl md:text-4xl mb-6">What We Offer</h2>
         <p class="manrope-light mb-10 w-3/4 mx-auto">
           Join our growing list of partners to experience the IFO difference. We
           will turbocharge your organization and help you realize and expand
@@ -19,21 +19,22 @@ import Marketing from "../assets/marketing.jpg";
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-center mx-4"
         >
           <!-- Card 1 -->
-          <a href="/facilitator-training">
+          <a href="/facilitators">
             <div
-              class="bg-warm-green rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
+              class="text-teal-200 bg-cool-green rounded-xl shadow-lg/50 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
             >
               <img
-                src={TrainingCourse.src}
-                alt="Image of a group of seated participants facing a projector screen with an instructor standing"
+                src={Marketing.src}
+                alt="Marketing image"
                 class="w-full h-36 object-top object-cover"
               />
-              <div class="px-3 py-4 md:p-6 text-center text-lime-200">
-                <h3 class="text-3xl solway-medium pb-2">Certification</h3>
+              <div class="px-3 py-4 md:p-6 text-center">
+                <h3 class="text-3xl solway-medium pb-2">
+                  Facilitator Directory
+                </h3>
                 <p class="solway-light">
-                  Certification program for facilitators, empowering confidence,
-                  recognition, and client appeal. Join us to unlock
-                  opportunities.
+                  IFO certified facilitators are highly trained professionals
+                  who are ready to help you achieve your goals.
                 </p>
               </div>
             </div>
@@ -56,23 +57,25 @@ import Marketing from "../assets/marketing.jpg";
             </div>
           </div>
           <!-- Card 3 -->
-          <div
-            class="text-teal-200 bg-cool-green rounded-xl shadow-lg/50 overflow-hidden transform transition duration-300"
-          >
-            <img
-              src={Marketing.src}
-              alt="Marketing image"
-              class="w-full h-36 object-top object-cover"
-            />
-            <div class="px-3 py-4 md:p-6 text-center">
-              <h3 class="text-3xl solway-medium pb-2">Marketing</h3>
-              <p class="solway-light">
-                Access exclusive marketing opportunities, such as podcast
-                features and social media promotion, tailored to your membership
-                level.
-              </p>
+          <a href="/facilitator-training">
+            <div
+              class="bg-warm-green rounded-xl shadow-lg/25 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl/35"
+            >
+              <img
+                src={TrainingCourse.src}
+                alt="Image of a group of seated participants facing a projector screen with an instructor standing"
+                class="w-full h-36 object-top object-cover"
+              />
+              <div class="px-3 py-4 md:p-6 text-center text-lime-200">
+                <h3 class="text-3xl solway-medium pb-2">Certification</h3>
+                <p class="solway-light">
+                  Certification program for facilitators, empowering confidence,
+                  recognition, and client appeal. Join us to unlock
+                  opportunities.
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

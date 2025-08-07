@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Gallery from "../components/Photos.jsx";
+import FacilitatorBadge from "../assets/ifo-certified-facilitator-badge.png";
 ---
 
 <Layout>
@@ -20,32 +21,42 @@ import Gallery from "../components/Photos.jsx";
     >
       Level Up Your Facilitation Skills
     </p>
-
-    <p class="md:text-lg py-4 manrope-light">
-      Unlock your full potential as a peer group facilitator in our intensive
-      two-and-a-half-day certification program.
-    </p>
-    <p class="md:text-lg pb-4 manrope-light">
-      Designed for professional facilitators and passionate leaders, this
-      program equips you with the tools, techniques, and insights to excel in
-      facilitating impactful peer groups.
-    </p>
-
-    <p class="md:text-lg pb-2 manrope-bold">You will master:</p>
-
-    <div class="pl-5 md:pl-10">
-      <ul class="md:text-lg py-2 leading-5 manrope-light checklist">
-        <li class="pb-2 md:pb-4">
-          The art of creating a safe, engaging group environment
-        </li>
-        <li class="pb-2 md:pb-4">
-          Best practices for driving meaningful discussions
-        </li>
-        <li>Innovative strategies to boost participant connection</li>
-      </ul>
+    <div class="flex flex-col md:flex-row lg:max-w-5xl mx-auto">
+      <div class="w-fit md:w-full">
+        <p class="md:text-lg py-4 manrope-light">
+          Unlock your full potential as a peer group facilitator in our
+          intensive two-and-a-half-day certification program.
+        </p>
+        <p class="md:text-lg pb-4 manrope-light">
+          Designed for professional facilitators and passionate leaders, this
+          program equips you with the tools, techniques, and insights to excel
+          in facilitating impactful peer groups.
+        </p>
+      </div>
+      <div class="flex justify-center md:min-w-1/3">
+        <img
+          src={FacilitatorBadge.src}
+          alt="IFO Certified badge"
+          class="w-50 h-50 md:pt-4"
+        />
+      </div>
+    </div>
+    <div class="lg:max-w-5xl mx-auto">
+      <p class="md:text-lg pb-2 manrope-bold">You will master:</p>
+      <div class="pl-5 md:pl-10">
+        <ul class="md:text-lg py-2 leading-5 manrope-light checklist">
+          <li class="pb-2 md:pb-4">
+            The art of creating a safe, engaging group environment
+          </li>
+          <li class="pb-2 md:pb-4">
+            Best practices for driving meaningful discussions
+          </li>
+          <li>Innovative strategies to boost participant connection</li>
+        </ul>
+      </div>
     </div>
     <p
-      class="text-center text-3xl lg:text-4xl pt-6 md:pt-8 solway-medium mt-4 text-cool-green"
+      class="text-center text-3xl lg:text-4xl md:pt-8 solway-medium mt-4 text-cool-green"
     >
       Register Today
     </p>

@@ -144,7 +144,7 @@ export default async function() {
       languages: 'English',
       country: 'USA',
       location: 'Travels from Chicago',
-      website: 'https://Siegal Strategies.com',
+      website: 'https://siegalstrategies.com/',
       yearsOfExperience: '20',
       areasOfExpertise: 'Strategic Planning, Conflict resolution, facilitating, moderating, coaching',
       certifications: 'International Facilitators Organization',
