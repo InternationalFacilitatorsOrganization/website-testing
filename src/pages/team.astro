@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import ContactButton from "../components/utils/ContactButton.html";
 import MoHeadshot from "../assets/mo-headshot.avif";
 import NancyHeadshot from "../assets/nancy-headshot.avif";
+import SloaneHeadshot from "../assets/sloane-headshot.jpg";
 import LinkedInLogo from "../assets/LI-Logo.png";
 import ShrmPS from "../assets/shrm-ps.png";
 ---
@@ -57,19 +58,19 @@ import ShrmPS from "../assets/shrm-ps.png";
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
     </div>
+
     <ContactButton />
-    <div
-      class="container mx-auto md:px-30 bg-white md:w-3/4 md:flex md:flex-row gap-2"
-    >
+
+    <div class="container mx-auto lg:px-30 bg-white md:flex md:flex-row gap-2">
       <div class="md:w-1/2 text-center justify-center">
         <img
           src={MoHeadshot.src}
-          alt="Mo Fathelbab"
+          alt="photo of Mo Fathelbab"
           class="w-2/3 mx-auto md:w-full"
         />
         <p class="py-6 text-2xl solway-medium">Mo Fathelbab</p>
         <p
-          class="mb-6 manrope-light text-pretty md:w-5/6 mx-auto px-4 leading-8"
+          class="mb-6 manrope-light text-pretty md:w-5/6 mx-auto lg:px-4 leading-8"
         >
           Mo is an expert facilitator and trusted advisor with decades of
           experience helping leaders build authentic connections and
@@ -100,13 +101,13 @@ import ShrmPS from "../assets/shrm-ps.png";
       <div class="md:w-1/2 text-center">
         <img
           src={NancyHeadshot.src}
-          alt="Nancy Koleda"
+          alt="photo of Nancy Koleda"
           class="w-2/3 mx-auto md:w-full"
         />
 
         <p class="py-6 text-2xl solway-medium">Nancy Koleda</p>
         <p
-          class="mb-6 manrope-light text-pretty md:w-5/6 mx-auto px-4 leading-8"
+          class="mb-6 manrope-light text-pretty md:w-5/6 mx-auto lg:px-4 leading-8"
         >
           Nancy is a seasoned facilitator and leadership coach with deep
           experience guiding executives and teams through transformational
@@ -116,6 +117,30 @@ import ShrmPS from "../assets/shrm-ps.png";
         </p>
         <a
           href="https://www.linkedin.com/in/nancy-koleda-2349585/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={LinkedInLogo.src} width="110" class="mx-auto pb-10" />
+        </a>
+      </div>
+      <div class="md:w-1/2 text-center">
+        <img
+          src={SloaneHeadshot.src}
+          alt="photo of Sloane Kaplan"
+          class="w-2/3 mx-auto md:w-full"
+        />
+
+        <p class="py-6 text-2xl solway-medium">Sloane Kaplan</p>
+        <p
+          class="mb-6 manrope-light text-pretty md:w-5/6 mx-auto lg:px-4 leading-8"
+        >
+          Sloane is passionate about people, details, and getting things
+          done—with heart and humor. She brings a background in hospitality,
+          office administration, and international volunteer work, and thrives
+          in roles that blend structure with genuine human connection.
+        </p>
+        <a
+          href="https://www.linkedin.com/in/sloane-kaplan-52a14817/"
           target="_blank"
           rel="noopener noreferrer"
         >
