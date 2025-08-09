@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FrnLogo from "../assets/frn-logo.png";
+import ContactButton from "../components/utils/ContactButton.html";
 ---
 
 <Layout>
@@ -80,18 +81,18 @@ import FrnLogo from "../assets/frn-logo.png";
     <div
       class="container mx-auto md:px-30 bg-white md:w-3/4 pb-8 manrope-light"
     >
-      <p class="mb-6 text-xl md:text-3xl text-cool-green solway-medium">
-        Want to Learn More?
-      </p>
-      <div class="flex gap-8 content-center">
-        <p class="pb-6">Visit our sister site</p>
-        <a
-          class="text-cool-green underline"
-          href="https://www.forumresourcesnetwork.com"
-          target="_blank"
+      <div class="flex flex-col md:flex-row md:gap-8 content-center">
+        <div
+          class="pt-8 md:p-10 md:pt-5 md: md:pb-20 mx-auto w-full text-center"
         >
-          <img src={FrnLogo.src} alt="Peer Group Forum" class="h-8" />
-        </a>
+          <a href="/facilitators" class="no-underline">
+            <button
+              class="rounded-full bg-orange-300 text-orange-800 font-bold p-2 flex-nowrap manrope-bold text-2xl md:text-2xl px-16 md:px-8 hover:cursor-pointer hover:bg-cool-green hover:text-white focus:bg-warm-green focus:text-white text-nowrap"
+              >Find a Facilitator
+            </button>
+          </a>
+        </div>
+        <ContactButton />
       </div>
     </div>
     <Footer />
